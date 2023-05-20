@@ -10,6 +10,7 @@ const Banner = () => {
       <p>Ohhhh No!</p>
       <FontAwesomeIcon icon="check-square" />
       Your <FontAwesomeIcon icon="coffee" /> is hot and ready!
+      <FontAwesomeIcon icon={faCoffee} />
     </div>
   );
 };
