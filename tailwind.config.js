@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         defaultRed: "#f9004d",
+        hoverdefaultRed: "#ffcdb8",
         darkTheme: "#282828",
       },
     },
