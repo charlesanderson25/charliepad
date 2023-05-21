@@ -8,11 +8,11 @@ const Banner = () => {
       className="flex bg-darkTheme flex-col md:flex-row justify-between items-center p-4"
     >
       <div className="flex items-center">
-        <a href="/" className="flex items-center mr-4">
+        <a href="/" className="flex items-center mr-16">
           <IconLogoNotepad className="bg-defaultRed text-6xl" />
-          <h1 className="font-bold text-lg text-white">CharliePad</h1>
+          <h1 className="font-bold text-3xl text-white">CharliePad</h1>
         </a>
-        <a className="text-white" href="/">
+        <a className="text-white text-xl font-bold" href="/">
           Home
         </a>
       </div>
