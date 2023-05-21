@@ -5,7 +5,6 @@ function App() {
   return (
     <>
       <Banner />
-      <h1 className="text-3xl font-bold underline">Ohhhhh Yeah!</h1>
     </>
   );
 }
