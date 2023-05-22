@@ -7,6 +7,7 @@ export default {
         defaultRed: "#f9004d",
         hoverdefaultRed: "#ffcdb8",
         darkTheme: "#282828",
+        backGroundColorDarkTheme: "#404040",
       },
     },
   },
