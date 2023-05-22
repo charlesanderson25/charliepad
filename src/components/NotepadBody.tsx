@@ -1,13 +1,15 @@
+import uuid from "react-uuid";
+
 const notepads = [
   {
-    id: 1,
+    id: uuid(),
     tittle: "Primeiro Notepad",
     subtitle: "Primeiro Notepad cadastrado",
     created_at: new Date(),
   },
 
   {
-    id: 2,
+    id: uuid(),
     tittle: "Segundo Notepad",
     subtitle: "Segundo Notepad cadastrado",
     created_at: new Date(),
@@ -23,9 +25,9 @@ const NotepadList = () => {
         return (
           <div>
             {notepad.id}
-            <h1>{notepad.tittle}</h1>
-            <h4>{notepad.subtitle}</h4>
-            <p>{notepad.created_at.toLocaleDateString()}</p>
+            <h1 key={uuid()}>{notepad.tittle}</h1>
+            <h4 key={uuid()}>{notepad.subtitle}</h4>
+            <p key={uuid()}>{notepad.created_at.toLocaleDateString()}</p>
           </div>
         );
       })}
