@@ -19,11 +19,11 @@ const notepads = [
 // Componente Filho
 const NotepadList = () => {
   return (
-    <div className="p-5 m-5 bg-darkTheme text-white">
+    <div className="p-5 m-5 text-white bg-darkTheme">
       <h2>NotepadList</h2>
       {notepads.map((notepad) => {
         return (
-          <div key={uuid()} className="border-b p-2">
+          <div key={notepad.id} className="border-b p-2">
             <h1 className="text-lg font-bold">{notepad.tittle}</h1>
             <h4>{notepad.subtitle}</h4>
             <p>{notepad.created_at.toLocaleDateString()}</p>
