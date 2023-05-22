@@ -23,11 +23,10 @@ const NotepadList = () => {
       <h2>NotepadList</h2>
       {notepads.map((notepad) => {
         return (
-          <div>
-            {notepad.id}
-            <h1 key={uuid()}>{notepad.tittle}</h1>
-            <h4 key={uuid()}>{notepad.subtitle}</h4>
-            <p key={uuid()}>{notepad.created_at.toLocaleDateString()}</p>
+          <div key={uuid()} className="border-b p-2">
+            <h1 className="text-lg font-bold">{notepad.tittle}</h1>
+            <h4>{notepad.subtitle}</h4>
+            <p>{notepad.created_at.toLocaleDateString()}</p>
           </div>
         );
       })}
