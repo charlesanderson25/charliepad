@@ -1,12 +1,12 @@
 import "./App.css";
 import Banner from "./components/Banner";
-import NotepadList from "./components/NotepadList";
+import NotepadBody from "./components/NotepadBody";
 
 function App() {
   return (
     <>
       <Banner />
-      <NotepadList />
+      <NotepadBody />
     </>
   );
 }
