@@ -1,5 +1,6 @@
 import { SiMicrosoftonenote as IconLogoNotepad } from "react-icons/si";
 import ButtonCreateNotepad from "./ButtonCreateNotepad";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -8,18 +9,18 @@ const Banner = () => {
       className="flex bg-darkTheme flex-col md:flex-row justify-between items-center p-6 "
     >
       <div className="flex items-center">
-        <a href="/" className="flex items-center mr-16">
+        <Link to="/" className="flex items-center mr-16">
           <IconLogoNotepad className="bg-defaultRed text-6xl m-1 " />
           <h1 className="font-bold text-2xl text-white hover:text-defaultRed">
             CharliePad
           </h1>
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-white text-l font-bold hover:text-defaultRed"
-          href="/"
+          to="/"
         >
           Home
-        </a>
+        </Link>
       </div>
       <ButtonCreateNotepad />
     </div>
