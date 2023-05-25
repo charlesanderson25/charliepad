@@ -1,4 +1,4 @@
-const CreateNotepad = () => {
+const ButtonCreateNotepad = () => {
   return (
     <div
       style={{ fontFamily: "Josefin Sans, sans-serif" }}
@@ -11,4 +11,4 @@ const CreateNotepad = () => {
   );
 };
 
-export default CreateNotepad;
+export default ButtonCreateNotepad;
