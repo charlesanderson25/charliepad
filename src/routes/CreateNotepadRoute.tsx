@@ -20,7 +20,7 @@ const CreateNotepadRoute = () => {
     <section className="my-20 relative min-h-screen">
       <div className="form-container absolute inset-x-1/4">
         <form className="form bg-darkTheme rounded-2xl py-9 px-16 font-sans">
-          <h1 className="font-bold text-2xl text-white">Criar Notepad</h1>
+          <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <input
               className="bg-darkTheme shadow-md w-full py-3 px-1 m-2 border rounded-md"
