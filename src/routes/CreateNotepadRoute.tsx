@@ -23,21 +23,21 @@ const CreateNotepadRoute = () => {
           <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <input
-              className="bg-darkTheme shadow-md w-full py-3 px-1 m-2 border rounded-md"
+              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md "
               type="text"
               placeholder="Digite seu Título"
             />
           </StyledLabel>
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <input
-              className="bg-darkTheme shadow-md w-full py-3 px-1 m-2 border rounded-md	"
+              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
               type="text"
               placeholder="Digite o Subtítulo"
             />
           </StyledLabel>
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <textarea
-              className="bg-darkTheme shadow-md w-full py-3 px-1 m-2 border rounded-md	"
+              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
               name=""
               id=""
               placeholder="Digite seu Texto"
