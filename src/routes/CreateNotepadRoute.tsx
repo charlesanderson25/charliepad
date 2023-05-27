@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ButtonSubmitForm from "../components/ButtonSubmitForm";
 
 interface StyledLabelProps {
   titulo: string;
@@ -42,7 +43,7 @@ const CreateNotepadRoute = () => {
               placeholder="Digite seu Texto"
             ></textarea>
           </StyledLabel>
-          <button type="submit">Enviar</button>
+          <button type="submit">{<ButtonSubmitForm />}</button>
         </form>
       </div>
     </section>
