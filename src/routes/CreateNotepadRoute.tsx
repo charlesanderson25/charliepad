@@ -28,6 +28,13 @@ const CreateNotepadRoute = () => {
           className="form bg-darkTheme rounded-2xl py-9 px-16 font-sans"
           onSubmit={(event) => {
             event.preventDefault();
+            console.log(title);
+            console.log(subtittle);
+            console.log(content);
+            alert("O formulário foi enviado com sucesso!");
+            setTittle("");
+            setSubtittle("");
+            setContent("");
           }}
         >
           <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
@@ -40,7 +47,6 @@ const CreateNotepadRoute = () => {
               onChange={(event) => {
                 const newTittle = event.target.value;
                 setTittle(newTittle);
-                console.log(newTittle);
               }}
             />
           </StyledLabel>
@@ -53,7 +59,6 @@ const CreateNotepadRoute = () => {
               onChange={(event) => {
                 const newSubtittle = event.target.value;
                 setSubtittle(newSubtittle);
-                console.log(newSubtittle);
               }}
             />
           </StyledLabel>
@@ -67,7 +72,6 @@ const CreateNotepadRoute = () => {
               onChange={(event) => {
                 const newContent = event.target.value;
                 setContent(newContent);
-                console.log(newContent);
               }}
             ></textarea>
           </StyledLabel>
