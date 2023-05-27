@@ -9,7 +9,7 @@ interface StyledLabelProps {
 
 const StyledLabel = styled.label<StyledLabelProps>`
   display: block;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
   margin-top: 1rem;
   margin-bottom: 1rem;
