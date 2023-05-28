@@ -40,7 +40,12 @@ const NotepadList = () => {
 
   useEffect(() => {
     getNotepads();
+    console.log("Os dados foram carregados!");
   }, []);
+
+  useEffect(() => {
+    console.log("Os dados foram atualizados");
+  }, [notepads]);
 
   return (
     <div className="p-5 m-5 text-white bg-darkTheme">
