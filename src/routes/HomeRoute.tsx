@@ -1,6 +1,7 @@
 import uuid from "react-uuid";
 import { useEffect, useState } from "react";
 import { api } from "../api";
+import { FaSpinner } from "react-icons/fa";
 
 // const notepads = [
 //   {
@@ -27,10 +28,12 @@ interface Notepad {
 }
 
 const initialNotepads: Notepad[] = [];
+const loadSpinner = true;
 
 // Componente Filho
 const NotepadList = () => {
   const [notepads, setNotepads] = useState<Notepad[]>(initialNotepads);
+  const [load, setLoad] = useState(loadSpinner);
 
   async function getNotepads() {
     const response = await api.get("/notepads");
@@ -44,11 +47,20 @@ const NotepadList = () => {
   }, []);
 
   useEffect(() => {
+    if (notepads.length > 0) {
+      setLoad(false);
+    }
     console.log("Os dados foram atualizados");
   }, [notepads]);
 
   return (
     <div className="p-5 m-5 text-white bg-darkTheme">
+      {load && (
+        <div className="flex justify-center">
+          <FaSpinner className="text-4xl animate-spin" />
+        </div>
+      )}
+
       <h2>NotepadList</h2>
       {notepads.map((notepad) => {
         return (
