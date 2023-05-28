@@ -1,5 +1,5 @@
 import uuid from "react-uuid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../api";
 
 // const notepads = [
@@ -38,7 +38,9 @@ const NotepadList = () => {
     setNotepads(showNotepads);
   }
 
-  getNotepads();
+  useEffect(() => {
+    getNotepads();
+  }, []);
 
   return (
     <div className="p-5 m-5 text-white bg-darkTheme">
