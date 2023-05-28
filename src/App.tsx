@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Banner from "./components/Banner";
-import NotepadBody from "./components/NotepadBody";
 import HomeRoute from "../src/routes/HomeRoute";
 import CreateNotepadRoute from "../src/routes/CreateNotepadRoute";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +17,8 @@ function App() {
             <Route path="/Criar-Notepad" element={<CreateNotepadRoute />} />
           </Routes>
         </div>
+        <Footer />
+        
       </BrowserRouter>
     </>
   );
