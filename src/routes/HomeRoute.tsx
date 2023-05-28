@@ -1,5 +1,4 @@
 import uuid from "react-uuid";
-import axios from "axios";
 import { useState } from "react";
 import { api } from "../api";
 
