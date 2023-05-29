@@ -2,9 +2,9 @@ import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () =>{
     return (
-        <div className=''>
+        <div>
             <footer> 
-                <FaRegCopyright /> Charles Anderson
+                <h2 className='flex justify-center'><FaRegCopyright />Charles Anderson</h2>
             </footer>
         </div>
     )
