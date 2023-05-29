@@ -4,4 +4,4 @@ export const api = axios.create({
   baseURL: "https://notepads.eduardovelho.com/",
 });
 
-api.get("/notepads/1");
+// api.get("/notepads/1");
