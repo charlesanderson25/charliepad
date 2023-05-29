@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import HomeRoute from "../src/routes/HomeRoute";
 import CreateNotepadRoute from "../src/routes/CreateNotepadRoute";
 import Footer from "./components/Footer";
+import Welcome from "./routes/Welcome";
 
 function App() {
   return (
@@ -13,12 +14,13 @@ function App() {
           <Banner />
 
           <Routes>
+            <Route path="/Welcome" element={<Welcome />} />
             <Route path="/" element={<HomeRoute />} />
             <Route path="/Criar-Notepad" element={<CreateNotepadRoute />} />
           </Routes>
         </div>
         <Footer />
-        
+
       </BrowserRouter>
     </>
   );
