@@ -94,7 +94,7 @@ const NotepadList = () => {
 // Componente Pai
 const HomeRoute = () => {
   return (
-    <div className="bg-backGroundColorDarkTheme h-screen">
+    <div className="bg-backGroundColorDarkTheme">
       <NotepadList />
     </div>
   );
