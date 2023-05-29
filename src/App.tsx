@@ -5,6 +5,7 @@ import HomeRoute from "../src/routes/HomeRoute";
 import CreateNotepadRoute from "../src/routes/CreateNotepadRoute";
 import Footer from "./components/Footer";
 import Welcome from "./routes/Welcome";
+import BackGroundImage from "./components/BackGroundImage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/Welcome" element={<Welcome />} />
             <Route path="/" element={<HomeRoute />} />
             <Route path="/Criar-Notepad" element={<CreateNotepadRoute />} />
+            <Route path="Image" element={<BackGroundImage/>}/>
           </Routes>
         </div>
         <Footer />
