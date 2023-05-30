@@ -12,12 +12,12 @@ const Banner = () => {
       <div className="flex items-center">
         <Link to="/" className="flex items-center mr-16">
           <IconLogoNotepad className="bg-defaultRed text-6xl m-1 " />
-          <h1 className="font-bold text-2xl text-white hover:text-defaultRed">
+          <h1 className="font-bold text-2xl text-white hover:text-defaultRed tracking-wide">
             CharliePad
           </h1>
         </Link>
         <Link
-          className="text-white text-l font-bold hover:text-defaultRed"
+          className="text-white text-l font-bold hover:text-defaultRed tracking-wide"
           to="/"
         >
           Home
