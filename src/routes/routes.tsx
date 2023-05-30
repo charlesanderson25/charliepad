@@ -10,8 +10,8 @@ const RoutesApp = () => {
     return (
         
           <Routes>         
-            <Route path="/" element={<HomeRoute />} />
-            <Route path="/Welcome" element={<Welcome />} />
+            <Route path="/" element={<Welcome />} />
+            <Route path="/listar-notepads" element={<HomeRoute />} />
             <Route path="/Criar-Notepad" element={<CreateNotepadRoute />} />
             <Route path="Image" element={<BackGroundImage/>}/>
 
