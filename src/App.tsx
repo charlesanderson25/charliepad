@@ -8,7 +8,7 @@ function App() {
     <>
       <Banner />
       <RoutesApp/>
-      <div className="block bg-green-500">
+      <div className="block">
         <Footer />
       </div>
     </>
