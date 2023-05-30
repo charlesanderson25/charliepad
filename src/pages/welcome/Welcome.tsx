@@ -1,4 +1,4 @@
-import BackGroundImage from "../components/BackGroundImage";
+import BackGroundImage from "../../components/BackGroundImage";
 
 const Welcome = () => {
     return (

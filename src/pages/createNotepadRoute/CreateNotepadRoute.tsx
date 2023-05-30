@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ButtonSubmitForm from "../components/ButtonSubmitForm";
+import ButtonSubmitForm from "../../components/ButtonSubmitForm";
 import { useState } from "react";
 
 interface StyledLabelProps {

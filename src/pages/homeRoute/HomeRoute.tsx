@@ -1,6 +1,6 @@
 import uuid from "react-uuid";
 import { useEffect, useState } from "react";
-import { api } from "../api";
+import { api } from "../../api";
 import { FaSpinner } from "react-icons/fa";
 
 // const notepads = [
