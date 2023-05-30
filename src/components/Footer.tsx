@@ -1,17 +1,3 @@
-// import { FaRegCopyright } from 'react-icons/fa';
-
-// const Footer = () =>{
-//     return (
-//         <div 
-//             style={{ fontFamily: "Josefin Sans, sans-serif" }} 
-//             className="flex justify-center bg-darkTheme text-white">
-//             <h2 className='flex justify-center items-center m-5 tracking-wide' ><FaRegCopyright className="tracking-wide" />Charles Anderson</h2>
-//         </div>
-//     )
-// }
-
-// export default Footer;
-
 import { FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
