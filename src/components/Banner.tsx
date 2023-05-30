@@ -1,6 +1,7 @@
 import { SiMicrosoftonenote as IconLogoNotepad } from "react-icons/si";
 import ButtonCreateNotepad from "./ButtonCreateNotepad";
 import { Link } from "react-router-dom";
+import ListNotepads from "./ListNotepads";
 
 const Banner = () => {
   return (
@@ -21,6 +22,7 @@ const Banner = () => {
         >
           Home
         </Link>
+        <ListNotepads />
       </div>
       <ButtonCreateNotepad />
     </div>
