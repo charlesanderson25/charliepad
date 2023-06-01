@@ -61,12 +61,14 @@ const NotepadList = () => {
         </div>
       )}
 
-      <h2 className="font-bold text-2xl	ml-2 text-defaultRed">NotepadList</h2>
+      <h2 className="font-bold text-3xl	ml-2 text-defaultRed">NotepadList</h2>
       {notepads.map((notepad) => {
         return (
           <div key={notepad.id} className="border-b p-2">
-            <h1 className="text-lg font-bold">{notepad.title}</h1>
-            <h4 className="italic">{notepad.subtitle}</h4>
+            <span className="italic">#{notepad.id}</span>
+            <h1 className="text-2xl font-bold">{notepad.title}</h1>
+            <h4 className="text-lg	font-bold">{notepad.subtitle}</h4>
+            <p className="italic">{notepad.content}</p>
             <p>{new Date(notepad.created_at).toLocaleDateString()}</p>
           </div>
         );
