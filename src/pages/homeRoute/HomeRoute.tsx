@@ -54,7 +54,7 @@ const NotepadList = () => {
   }, [notepads]);
 
   return (
-    <div className="p-5 m-5 text-white bg-darkTheme">
+    <div className="p-5 m-5 text-white bg-darkTheme max-w-screen-xl md:mx-auto">
       {load && (
         <div className="flex justify-center">
           <FaSpinner className="text-4xl animate-spin" />
