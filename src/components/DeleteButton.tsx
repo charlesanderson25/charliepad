@@ -2,8 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdDeleteForever as DeleteIcon } from "react-icons/md";
 import toast from "react-simple-toasts";
+import { api } from "../api";
 
-const DeleteButton = () => {
+interface PropsDeleteButton {
+  id: string;
+}
+
+const DeleteButton = ({ id }: PropsDeleteButton) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
@@ -16,7 +21,13 @@ const DeleteButton = () => {
   };
 
   async function deleteNotepad() {
-    toast("Ohh Não, Fui Deletado!");
+    const response = await api.delete(`/notepads/${id}`);
+    if (response.data.sucess === true) {
+      toast(`Ohh Não, #${id}Fui Deletado!`);
+    } else {
+      toast("Houve um erro ao excluir esse notepad!");
+    }
+
     navigate("/");
   }
 

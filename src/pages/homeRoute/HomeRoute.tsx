@@ -67,7 +67,7 @@ const NotepadList = () => {
         return (
           <div key={notepad.id} className="border-b p-2">
             <span className="italic">#{notepad.id}</span>
-            <DeleteButton />
+            <DeleteButton id={notepad.id} />
             <h1 className="text-2xl font-bold">{notepad.title}</h1>
             <h4 className="text-lg	font-bold">{notepad.subtitle}</h4>
             <p className="italic">{notepad.content}</p>
