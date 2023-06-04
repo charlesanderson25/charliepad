@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ButtonSubmitForm from "../../components/ButtonSubmitForm";
 import { useState } from "react";
+import { api } from "../../api";
 
 interface StyledLabelProps {
   titulo: string;
@@ -20,6 +21,16 @@ const CreateNotepadRoute = () => {
   const [title, setTittle] = useState("");
   const [subtittle, setSubtittle] = useState("");
   const [content, setContent] = useState("");
+
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const response = await api.post("/notepads,", {
+      title,
+      subtittle,
+      content,
+    });
+    console.log(response.data);
+  }
 
   return (
     <section className="my-20 relative min-h-screen">
