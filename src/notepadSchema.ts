@@ -4,7 +4,7 @@ const title = z
   .string()
 
   .min(3, {
-    message: "Mínimo de 3 caracteres para p título.",
+    message: "Mínimo de 3 caracteres para o título.",
   })
   .max(16, {
     message: "Máximo de 16 caracteres para o título",
