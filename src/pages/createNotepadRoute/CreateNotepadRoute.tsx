@@ -26,11 +26,11 @@ const CreateNotepadRoute = () => {
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const response = await api.post("/notepads,", {
-      title,
-      subtittle,
-      content,
-    });
+    const objectFieldsToValidation = { title, subtittle, content };
+
+    notepadSchema.parse(objectFieldsToValidation);
+
+    const response = await api.post("/notepads,", objectFieldsToValidation);
     console.log(response.data);
   }
 
