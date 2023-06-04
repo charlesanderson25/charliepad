@@ -59,7 +59,9 @@ const CreateNotepadRoute = () => {
           <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <input
-              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
+              className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md ${zo.errors.title(
+                "border-red-500"
+              )}`}
               type="text"
               placeholder="Digite seu Título"
               // value={title}
@@ -77,7 +79,7 @@ const CreateNotepadRoute = () => {
 
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <input
-              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
+              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md border-red-500"
               type="text"
               placeholder="Digite o Subtítulo"
               // value={subtittle}
@@ -88,7 +90,11 @@ const CreateNotepadRoute = () => {
               name={zo.fields.subtitle()}
             />
           </StyledLabel>
-          <ErrorMessage>Erro Aqui</ErrorMessage>
+
+          {zo.errors.subtitle((erro) => (
+            <ErrorMessage>{erro.message}</ErrorMessage>
+          ))}
+
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             <textarea
               className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
@@ -103,7 +109,11 @@ const CreateNotepadRoute = () => {
               name={zo.fields.content()}
             ></textarea>
           </StyledLabel>
-          <ErrorMessage>Erro Aqui</ErrorMessage>
+
+          {zo.errors.content((erro) => (
+            <ErrorMessage>{erro.message}</ErrorMessage>
+          ))}
+
           <button type="submit">{<ButtonSubmitForm />}</button>
         </form>
       </div>
