@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ButtonSubmitForm from "../../components/ButtonSubmitForm";
 import { useState } from "react";
 import { api } from "../../api";
+import { notepadSchema } from "../../notepadSchema";
 
 interface StyledLabelProps {
   titulo: string;
@@ -24,6 +25,7 @@ const CreateNotepadRoute = () => {
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
     const response = await api.post("/notepads,", {
       title,
       subtittle,
