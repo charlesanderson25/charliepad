@@ -42,7 +42,7 @@ const DeleteButton = ({ id }: PropsDeleteButton) => {
       </button>
       {isHovered && (
         <p
-          className="text-defaultRed"
+          className="text-defaultRed flex items-center"
           style={{ fontFamily: "Josefin Sans, sans-serif" }}
         >
           Excluir Notepad?
