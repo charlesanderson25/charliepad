@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import ButtonSubmitForm from "../../components/ButtonSubmitForm";
-import { ErrorMessage } from "../../components/ErrorMEssage";
-import { useState } from "react";
+import { ErrorMessage } from "../../components/ErrorMessage";
 import { api } from "../../api";
 import { notepadSchema } from "../../notepadSchema";
 import { useZorm } from "react-zorm";
@@ -25,18 +24,24 @@ const CreateNotepadRoute = () => {
   // const [subtittle, setSubtittle] = useState("");
   // const [content, setContent] = useState("");
 
-  const zo = useZorm("create-notepad", notepadSchema, {});
+  const zo = useZorm("create-notepad", notepadSchema, {
+    async onValidSubmit(event) {
+      event.preventDefault();
+      const response = await api.post("/notepads", event.data);
+      console.log(response.data);
+    },
+  });
 
-  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  // async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  //   event.preventDefault();
 
-    const objectFieldsToValidation = {};
+  //   const objectFieldsToValidation = {};
 
-    notepadSchema.parse(objectFieldsToValidation);
+  //   notepadSchema.parse(objectFieldsToValidation);
 
-    const response = await api.post("/notepads,", objectFieldsToValidation);
-    console.log(response.data);
-  }
+  //   const response = await api.post("/notepads,", objectFieldsToValidation);
+  //   console.log(response.data);
+  // }
 
   return (
     <section className="my-20 relative min-h-screen">
