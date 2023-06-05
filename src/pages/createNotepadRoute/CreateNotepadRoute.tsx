@@ -4,6 +4,9 @@ import { ErrorMessage } from "../../components/ErrorMessage";
 import { api } from "../../api";
 import { notepadSchema } from "../../notepadSchema";
 import { useZorm } from "react-zorm";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-simple-toasts";
 
 interface StyledLabelProps {
   titulo: string;
@@ -23,12 +26,20 @@ const CreateNotepadRoute = () => {
   // const [title, setTittle] = useState("");
   // const [subtittle, setSubtittle] = useState("");
   // const [content, setContent] = useState("");
+  const navigate = useNavigate();
 
   const zo = useZorm("create-notepad", notepadSchema, {
     async onValidSubmit(event) {
       event.preventDefault();
       const response = await api.post("/notepads", event.data);
       console.log(response.data);
+
+      if (response.data.sucess === true) {
+        toast("O notepad foi cadastrado com sucesso!");
+      } else {
+        toast("Ocorreu um erro ao cadastrar o notepad!");
+      }
+      navigate("/");
     },
   });
 
