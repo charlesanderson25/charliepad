@@ -4,7 +4,7 @@ interface PropsErroMessage {
 
 export const ErrorMessage = ({ children }: PropsErroMessage) => {
   return (
-    <span className="text-sm leading-tight text-defaultRed flex pl-3">
+    <span className="text-sm leading-tight text-defaultRed flex pl-3 ">
       {children}
     </span>
   );

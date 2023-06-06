@@ -3,8 +3,7 @@ import ButtonSubmitForm from "../../components/ButtonSubmitForm";
 import { ErrorMessage } from "../../components/ErrorMessage";
 import { api } from "../../api";
 import { notepadSchema } from "../../notepadSchema";
-import { useZorm } from "react-zorm";
-import { useState } from "react";
+import { Value, useZorm } from "react-zorm";
 import { useNavigate } from "react-router-dom";
 import toast from "react-simple-toasts";
 
@@ -23,9 +22,6 @@ const StyledLabel = styled.label<StyledLabelProps>`
 `;
 
 const CreateNotepadRoute = () => {
-  // const [title, setTittle] = useState("");
-  // const [subtittle, setSubtittle] = useState("");
-  // const [content, setContent] = useState("");
   const navigate = useNavigate();
 
   const zo = useZorm("create-notepad", notepadSchema, {
@@ -43,93 +39,63 @@ const CreateNotepadRoute = () => {
     },
   });
 
-  // async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
-  //   event.preventDefault();
-
-  //   const objectFieldsToValidation = {};
-
-  //   notepadSchema.parse(objectFieldsToValidation);
-
-  //   const response = await api.post("/notepads,", objectFieldsToValidation);
-  //   console.log(response.data);
-  // }
-
   return (
     <section className="my-20 relative min-h-screen">
       <div className="form-container absolute inset-x-1/4">
         <form
           className="form bg-darkTheme rounded-2xl py-9 px-16 font-sans"
-          // onSubmit={(event) => {
-          //   event.preventDefault();
-          //   console.log(title);
-          //   console.log(subtittle);
-          //   console.log(content);
-          //   alert("O formulário foi enviado com sucesso!");
-          //   setTittle("");
-          //   setSubtittle("");
-          //   setContent("");
-          // }}
-          // onSubmit={onSubmit}
+        
           ref={zo.ref}
         >
           <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
+          
+          <div className="flex-col">
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
+            </StyledLabel>
             <input
-              className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md ${zo.errors.title(
-                "border-red-500"
-              )}`}
+              className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md ${zo.errors.title("border-2 border-red-500 focus:border-red-600")} `}
               type="text"
               placeholder="Digite seu Título"
-              // value={title}
-              // onChange={(event) => {
-              //   const newTittle = event.target.value;
-              //   setTittle(newTittle);
-              // }}
+              
               name={zo.fields.title()}
-            />
-          </StyledLabel>
-
+              />
           {zo.errors.title((erro) => (
             <ErrorMessage>{erro.message}</ErrorMessage>
           ))}
-
+          </div>
+          
+          <div className="flex-col">
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
-            <input
-              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md border-red-500"
+          </StyledLabel>
+          
+            <input className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md "
               type="text"
               placeholder="Digite o Subtítulo"
-              // value={subtittle}
-              // onChange={(event) => {
-              //   const newSubtittle = event.target.value;
-              //   setSubtittle(newSubtittle);
-              // }}
               name={zo.fields.subtitle()}
-            />
-          </StyledLabel>
+           />
 
           {zo.errors.subtitle((erro) => (
             <ErrorMessage>{erro.message}</ErrorMessage>
           ))}
+          </div>
+          
 
+          <div className="flex-col">
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
+            </StyledLabel>
             <textarea
               className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
               // name=""
               id=""
               placeholder="Digite seu Texto"
-              // value={content}
-              // onChange={(event) => {
-              //   const newContent = event.target.value;
-              //   setContent(newContent);
-              // }}
+              
               name={zo.fields.content()}
             ></textarea>
-          </StyledLabel>
 
           {zo.errors.content((erro) => (
             <ErrorMessage>{erro.message}</ErrorMessage>
           ))}
-
+          </div>
           <button type="submit">{<ButtonSubmitForm />}</button>
         </form>
       </div>
@@ -138,3 +104,4 @@ const CreateNotepadRoute = () => {
 };
 
 export default CreateNotepadRoute;
+
