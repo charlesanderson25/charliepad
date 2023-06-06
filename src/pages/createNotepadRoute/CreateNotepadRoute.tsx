@@ -28,9 +28,9 @@ const CreateNotepadRoute = () => {
     async onValidSubmit(event) {
       event.preventDefault();
       const response = await api.post("/notepads", event.data);
-      console.log(response.data);
+      console.log(response.data.sucess);
 
-      if (response.data.sucess === true) {
+      if (response.status === 201) {
         toast("O notepad foi cadastrado com sucesso!");
       } else {
         toast("Ocorreu um erro ao cadastrar o notepad!");
@@ -53,7 +53,7 @@ const CreateNotepadRoute = () => {
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             </StyledLabel>
             <input
-              className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md ${zo.errors.title("border-2 border-red-500 focus:border-red-600")} `}
+              className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md text-white ${zo.errors.title("border-2 border-red-500 focus:border-red-600")} `}
               type="text"
               placeholder="Digite seu Título"
               
@@ -68,7 +68,7 @@ const CreateNotepadRoute = () => {
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
           </StyledLabel>
           
-            <input className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md "
+            <input className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md text-white ${zo.errors.subtitle("border-2 border-red-500 focus:border-red-600")} `}
               type="text"
               placeholder="Digite o Subtítulo"
               name={zo.fields.subtitle()}
@@ -84,8 +84,8 @@ const CreateNotepadRoute = () => {
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
             </StyledLabel>
             <textarea
-              className="bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md"
-              // name=""
+              className={`bg-backGroundColorDarkTheme shadow-md w-full py-3 px-1 m-2 rounded-md text-white ${zo.errors.content("border-2 border-red-500 focus:border-red-600")} `}
+              
               id=""
               placeholder="Digite seu Texto"
               
