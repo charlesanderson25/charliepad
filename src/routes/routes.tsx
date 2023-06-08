@@ -5,7 +5,7 @@ import { NotFoundTwo } from "../pages/notFound/NotFoundTwo";
 import HomeRoute from "../pages/homeRoute/HomeRoute";
 import Welcome from "../pages/welcome/Welcome";
 import CreateNotepadRoute from "../pages/createNotepadRoute/CreateNotepadRoute";
-import EditNotepad from "../pages/EditNotepad";
+import EditNotepad from "../components/EditButton";
 
 const RoutesApp = () => {
   return (
