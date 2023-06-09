@@ -96,7 +96,7 @@ const CreateNotepadRoute = () => {
             <ErrorMessage>{erro.message}</ErrorMessage>
           ))}
           </div>
-          <button type="submit">{<ButtonSubmitForm />}</button>
+          <ButtonSubmitForm />
         </form>
       </div>
     </section>
