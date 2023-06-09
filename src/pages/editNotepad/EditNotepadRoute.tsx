@@ -29,7 +29,7 @@ const textEditNotepad = {
 };
 
 const initialStageNotepad = {
-  id: "0",
+  // id: "0",
   title: "",
   subtitle: "",
   content: "",
@@ -74,7 +74,7 @@ const EditNotepadRoute = () => {
           ref={zo.ref}
         >
           <h1 className="font-bold text-2xl text-white ml-3">
-            {textEditNotepad.title}
+            {textEditNotepad.title} {params.id}
           </h1>
 
           <div className="flex-col">

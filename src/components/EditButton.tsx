@@ -9,6 +9,7 @@ const texts = {
 };
 
 const EditButton = () => {
+  const params = useParams();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,14 +24,13 @@ const EditButton = () => {
     const response = await api.patch(`/notepads/${params.id}`);
   }
 
-  const params = useParams();
   return (
     <div className="flex">
       <span className="flex">
         <Link
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          to="/editar-notepad/:id"
+          to={`/editar-notepad/${params.id}`}
           className="font-bold text-4xl hover:text-defaultRed"
         >
           <EditIcon />
