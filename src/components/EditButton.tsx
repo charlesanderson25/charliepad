@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { string } from "zod";
 import { api } from "../api";
+import { FaEdit as EditIcon } from "react-icons/fa";
 
 const texts = {
   titleEditNotepad: "Editar Notepad",
@@ -25,7 +26,22 @@ const EditButton = () => {
   const params = useParams();
   return (
     <div>
-      {texts.titleEditNotepad} {params.id}{" "}
+      <span>
+        <Link
+          to="/editar-notepad/:id"
+          className="font-bold text-4xl hover:text-defaultRed"
+        >
+          <EditIcon />
+        </Link>
+        {isHovered && (
+          <p
+            className="text-defaultRed flex items-center"
+            style={{ fontFamily: "Josefin Sans, sans-serif" }}
+          >
+            {texts.titleEditNotepad} {params.id}{" "}
+          </p>
+        )}
+      </span>
     </div>
   );
 };

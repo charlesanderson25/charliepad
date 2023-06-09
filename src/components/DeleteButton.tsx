@@ -22,7 +22,7 @@ const DeleteButton = ({ id }: PropsDeleteButton) => {
 
   async function deleteNotepad() {
     const response = await api.delete(`/notepads/${id}`);
-    console.log(response.status)
+    console.log(response.status);
     if (response.status === 200) {
       toast(`Ohh Não, #${id}Fui Deletado!`);
     } else {
