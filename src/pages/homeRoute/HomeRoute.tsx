@@ -70,7 +70,7 @@ const NotepadList = () => {
             <span className="italic">#{notepad.id}</span>
             <span className="flex gap-6 items-center">
               <DeleteButton id={notepad.id} />
-              <EditButton />
+              <EditButton id={notepad.id}/>
             </span>
             <h1 className="text-2xl font-bold">{notepad.title}</h1>
             <h4 className="text-lg	font-bold">{notepad.subtitle}</h4>
