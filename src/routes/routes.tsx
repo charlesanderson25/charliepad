@@ -5,7 +5,7 @@ import { NotFoundTwo } from "../pages/notFound/NotFoundTwo";
 import HomeRoute from "../pages/homeRoute/HomeRoute";
 import Welcome from "../pages/welcome/Welcome";
 import CreateNotepadRoute from "../pages/createNotepadRoute/CreateNotepadRoute";
-import EditNotepad from "../components/EditButton";
+import EditNotepadRoute from "../pages/editNotepad/EditNotepadRoute";
 
 const RoutesApp = () => {
   return (
@@ -14,7 +14,7 @@ const RoutesApp = () => {
       <Route path="/listar-notepads" element={<HomeRoute />} />
       <Route path="/criar-Notepad" element={<CreateNotepadRoute />} />
       <Route path="image" element={<BackGroundImage />} />
-      <Route path="/editar-notepad/:id" element={<EditNotepad />} />
+      <Route path="/editar-notepad/:id" element={<EditNotepadRoute />} />
 
       <Route path="*" element={<NotFoundTwo />} />
     </Routes>
