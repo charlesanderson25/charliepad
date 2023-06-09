@@ -25,9 +25,11 @@ const EditButton = () => {
 
   const params = useParams();
   return (
-    <div>
-      <span>
+    <div className="flex">
+      <span className="flex">
         <Link
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           to="/editar-notepad/:id"
           className="font-bold text-4xl hover:text-defaultRed"
         >
@@ -35,10 +37,10 @@ const EditButton = () => {
         </Link>
         {isHovered && (
           <p
-            className="text-defaultRed flex items-center"
+            className="text-defaultRed flex items-center justify-center"
             style={{ fontFamily: "Josefin Sans, sans-serif" }}
           >
-            {texts.titleEditNotepad} {params.id}{" "}
+            {texts.titleEditNotepad} {params.id}
           </p>
         )}
       </span>
