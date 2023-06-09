@@ -4,12 +4,15 @@ import { string } from "zod";
 import { api } from "../api";
 import { FaEdit as EditIcon } from "react-icons/fa";
 
+interface PropsEditButton {
+  id: string;
+}
+
 const texts = {
   titleEditNotepad: "Editar Notepad",
 };
 
-const EditButton = () => {
-  const params = useParams();
+const EditButton = ( { id }: PropsEditButton ) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,9 +23,9 @@ const EditButton = () => {
     setIsHovered(false);
   };
 
-  async function editNotepad() {
-    const response = await api.patch(`/notepads/${params.id}`);
-  }
+  // async function editNotepad() {
+  //   const response = await api.patch(`/notepads/${params.id}`);
+  // }
 
   return (
     <div className="flex">
@@ -30,7 +33,7 @@ const EditButton = () => {
         <Link
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          to={`/editar-notepad/${params.id}`}
+          to={`/editar-notepad/${id}`}
           className="font-bold text-4xl hover:text-defaultRed"
         >
           <EditIcon />
@@ -40,7 +43,7 @@ const EditButton = () => {
             className="text-defaultRed flex items-center justify-center"
             style={{ fontFamily: "Josefin Sans, sans-serif" }}
           >
-            {texts.titleEditNotepad} {params.id}
+            {texts.titleEditNotepad} {id}
           </p>
         )}
       </span>
