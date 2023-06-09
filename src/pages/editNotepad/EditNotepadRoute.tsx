@@ -3,7 +3,7 @@ import ButtonSubmitForm from "../../components/ButtonSubmitForm";
 import { ErrorMessage } from "../../components/ErrorMessage";
 import { api } from "../../api";
 import { notepadSchema } from "../../notepadSchema";
-import { Value, useZorm } from "react-zorm";
+import { useZorm } from "react-zorm";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-simple-toasts";
 import { useEffect, useState } from "react";
@@ -24,12 +24,12 @@ const StyledLabel = styled.label<StyledLabelProps>`
 
 const textEditNotepad = {
   title: "Editar Notepad",
-  editSucess: "Edição concluída com sucesso",
+  editSuccess: "Edição concluída com sucesso",
   editeFailure: "Ocorreu um erro ",
 };
 
 const initialStageNotepad = {
-  // id: "0",
+  id: "0",
   title: "",
   subtitle: "",
   content: "",
@@ -46,11 +46,11 @@ const EditNotepadRoute = () => {
     async onValidSubmit(event) {
       event.preventDefault();
       const response = await api.patch(`/notepads/${params.id}`, event.data);
-      console.log(response.data.sucess);
+      console.log(response.data.success);
 
-      if (response.data.sucess === true) {
-        toast(textEditNotepad.editSucess);
-        navigate(`/listar-notepads/${params.id}`);
+      if (response.data.success === true) {
+        toast(textEditNotepad.editSuccess);
+        navigate("/listar-notepads/");
       } else {
         toast(textEditNotepad.editeFailure);
       }
@@ -139,7 +139,7 @@ const EditNotepadRoute = () => {
               <ErrorMessage>{erro.message}</ErrorMessage>
             ))}
           </div>
-          <button type="submit">{<ButtonSubmitForm />}</button>
+          <ButtonSubmitForm />
         </form>
       </div>
     </section>
