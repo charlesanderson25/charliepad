@@ -71,7 +71,15 @@ const NotepadList = () => {
         return (
           <div key={notepad.id} className="border-b p-2">
             <span>
-              <BreadCrumbs />
+              <BreadCrumbs
+                link={[
+                  { href: "/", label: "Home" },
+                  {
+                    href: `/editar-notepad/${notepad.id}`,
+                    label: `Editar Notepad${notepad.id}`,
+                  },
+                ]}
+              />
             </span>
             <span className="italic">#{notepad.id}</span>
 
