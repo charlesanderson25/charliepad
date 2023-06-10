@@ -57,20 +57,22 @@ const NotepadList = () => {
 
   return (
     <div className="p-5 m-5 text-white bg-darkTheme max-w-screen-xl md:mx-auto">
-      {load && (
-        <div className="flex">
-          <FaSpinner className="text-4xl animate-spin" />
-        </div>
-      )}
+      <div className="flex flex-col items-center">
+        {load && (
+          <div className="flex">
+            <FaSpinner className="text-4xl animate-spin items-center justify-center" />
+          </div>
+        )}
 
-      <h2 className="font-bold text-3xl	ml-2 text-defaultRed">NotepadList</h2>
+        <h2 className="font-bold text-3xl	ml-2 text-defaultRed">NotepadList</h2>
+      </div>
       {notepads.map((notepad) => {
         return (
           <div key={notepad.id} className="border-b p-2">
             <span className="italic">#{notepad.id}</span>
             <span className="flex gap-6 items-center">
               <DeleteButton id={notepad.id} />
-              <EditButton id={notepad.id}/>
+              <EditButton id={notepad.id} />
             </span>
             <h1 className="text-2xl font-bold">{notepad.title}</h1>
             <h4 className="text-lg	font-bold">{notepad.subtitle}</h4>
