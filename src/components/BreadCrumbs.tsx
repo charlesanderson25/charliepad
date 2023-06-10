@@ -6,12 +6,23 @@ const textBreadCrumbs = {
   edit: "Edit",
 };
 
-const BreadCrumbs = () => {
+interface PropsBreadCrumbs {
+  link: {
+    href: string;
+    label: React.ReactNode;
+  }[];
+}
+
+const BreadCrumbs = ({ link }: PropsBreadCrumbs) => {
   return (
     <div className="flex items-center gap-2">
-      <Link to="/">{textBreadCrumbs.home}</Link>
+      <Link className="font-bold hover:text-defaultRed" to={link[0].href}>
+        {link[0].label}
+      </Link>
       <ArrowIcon />
-      <Link to="/editar-notepad/:id">{textBreadCrumbs.edit}</Link>
+      <Link className="font-bold hover:text-defaultRed" to={link[1].href}>
+        {link[1].label}
+      </Link>
     </div>
   );
 };
