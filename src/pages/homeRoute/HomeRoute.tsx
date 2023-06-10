@@ -4,6 +4,7 @@ import { api } from "../../api";
 import { FaSpinner } from "react-icons/fa";
 import DeleteButton from "../../components/DeleteButton";
 import EditButton from "../../components/EditButton";
+import BreadCrumbs from "../../components/BreadCrumbs";
 
 // const notepads = [
 //   {
@@ -69,7 +70,11 @@ const NotepadList = () => {
       {notepads.map((notepad) => {
         return (
           <div key={notepad.id} className="border-b p-2">
+            <span>
+              <BreadCrumbs />
+            </span>
             <span className="italic">#{notepad.id}</span>
+
             <span className="flex gap-6 items-center">
               <DeleteButton id={notepad.id} />
               <EditButton id={notepad.id} />
