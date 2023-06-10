@@ -7,6 +7,7 @@ import { useZorm } from "react-zorm";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-simple-toasts";
 import { useEffect, useState } from "react";
+import BreadCrumbs from "../../components/BreadCrumbs";
 
 interface StyledLabelProps {
   titulo: string;
@@ -73,6 +74,17 @@ const EditNotepadRoute = () => {
           className="form bg-darkTheme rounded-2xl py-9 px-16 font-sans"
           ref={zo.ref}
         >
+          <div className="text-white pl-3 pb-1">
+            <BreadCrumbs
+              link={[
+                { href: "/", label: "Home" },
+                {
+                  href: "/listar-notepads/",
+                  label: "Listar Notepads",
+                },
+              ]}
+            />
+          </div>
           <h1 className="font-bold text-2xl text-white ml-3">
             {textEditNotepad.title} {params.id}
           </h1>
