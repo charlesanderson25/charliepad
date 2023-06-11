@@ -4,6 +4,10 @@ import { MdDeleteForever as DeleteIcon } from "react-icons/md";
 import toast from "react-simple-toasts";
 import { api } from "../api";
 
+const textDeleteButton = {
+  p: "Excluir Notepad?",
+}
+
 interface PropsDeleteButton {
   id: string;
 }
@@ -46,7 +50,7 @@ const DeleteButton = ({ id }: PropsDeleteButton) => {
           className="text-defaultRed flex items-center"
           style={{ fontFamily: "Josefin Sans, sans-serif" }}
         >
-          Excluir Notepad?
+          {textDeleteButton.p}
         </p>
       )}
     </span>
