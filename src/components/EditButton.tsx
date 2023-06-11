@@ -23,10 +23,6 @@ const EditButton = ( { id }: PropsEditButton ) => {
     setIsHovered(false);
   };
 
-  // async function editNotepad() {
-  //   const response = await api.patch(`/notepads/${params.id}`);
-  // }
-
   return (
     <div className="flex">
       <span className="flex">
