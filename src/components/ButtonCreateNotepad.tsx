@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 
+const textButtonCreateNotepad = {
+  button: "Criar Notepad", 
+}
+
 const ButtonCreateNotepad = () => {
   return (
     <div
@@ -8,7 +12,7 @@ const ButtonCreateNotepad = () => {
     >
       <Link to="/Criar-Notepad">
       <button className="rounded-lg bg-defaultRed font-bold text-lg p-3 border-none cursor-pointer text-white hover:text-hoverdefaultRed tracking-wide">
-        Criar Notepad
+        {textButtonCreateNotepad.button}
       </button>
       
       </Link>
