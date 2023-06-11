@@ -8,6 +8,10 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-simple-toasts";
 import BreadCrumbs from "../../components/BreadCrumbs";
 
+const textCreateNotepadRoute = {
+  h1: "Criar Notepad",
+}
+
 interface StyledLabelProps {
   titulo: string;
   subtitulo: string;
@@ -59,7 +63,7 @@ const CreateNotepadRoute = () => {
               ]}
             />
           </div>
-          <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
+          <h1 className="font-bold text-2xl text-white ml-3"> {textCreateNotepadRoute.h1} </h1>
           
           <div className="flex-col">
           <StyledLabel titulo="Título" subtitulo="Subtítulo" texto="Texto">
