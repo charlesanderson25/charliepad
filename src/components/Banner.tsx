@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div
       style={{ fontFamily: "Josefin Sans, sans-serif" }}
-      className="flex bg-darkTheme flex-col md:flex-row justify-between items-center p-6 "
+      className="flex bg-darkTheme flex-col md:flex-row justify-between items-center p-6 space-y-4 md:space-y-0 md:space-x-4"
     >
       <div className="flex items-center">
         <Link to="/" className="flex items-center mr-16">

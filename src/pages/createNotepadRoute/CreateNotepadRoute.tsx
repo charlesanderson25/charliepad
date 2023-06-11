@@ -6,6 +6,7 @@ import { notepadSchema } from "../../notepadSchema";
 import { Value, useZorm } from "react-zorm";
 import { useNavigate } from "react-router-dom";
 import toast from "react-simple-toasts";
+import BreadCrumbs from "../../components/BreadCrumbs";
 
 interface StyledLabelProps {
   titulo: string;
@@ -47,6 +48,17 @@ const CreateNotepadRoute = () => {
         
           ref={zo.ref}
         >
+          <div className="text-white pl-3 pb-1">
+            <BreadCrumbs
+              link={[
+                { href: "/", label: "Home" },
+                {
+                  href: "/listar-notepads/",
+                  label: "Listar Notepads",
+                },
+              ]}
+            />
+          </div>
           <h1 className="font-bold text-2xl text-white ml-3">Criar Notepad</h1>
           
           <div className="flex-col">
