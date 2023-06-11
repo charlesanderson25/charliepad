@@ -7,9 +7,11 @@ import { Value, useZorm } from "react-zorm";
 import { useNavigate } from "react-router-dom";
 import toast from "react-simple-toasts";
 import BreadCrumbs from "../../components/BreadCrumbs";
+import { Helmet } from "react-helmet";
 
 const textCreateNotepadRoute = {
   h1: "Criar Notepad",
+  title: "Criar Notepad",
 }
 
 interface StyledLabelProps {
@@ -46,6 +48,11 @@ const CreateNotepadRoute = () => {
 
   return (
     <section className="my-20 relative min-h-screen">
+      <Helmet>
+        <title>
+          {textCreateNotepadRoute.title}
+        </title>
+      </Helmet>
       <div className="form-container absolute inset-x-1/4">
         <form
           className="form bg-darkTheme rounded-2xl py-9 px-16 font-sans"

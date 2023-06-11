@@ -5,6 +5,7 @@ import { FaSpinner } from "react-icons/fa";
 import DeleteButton from "../../components/DeleteButton";
 import EditButton from "../../components/EditButton";
 import BreadCrumbs from "../../components/BreadCrumbs";
+import { Helmet } from "react-helmet";
 
 // const notepads = [
 //   {
@@ -21,6 +22,10 @@ import BreadCrumbs from "../../components/BreadCrumbs";
 //     created_at: new Date(),
 //   },
 // ];
+
+const textNotepadList = {
+  title: "NotepadList",
+}
 
 interface Notepad {
   id: string;
@@ -58,6 +63,11 @@ const NotepadList = () => {
 
   return (
     <div className="p-5 m-5 text-white bg-darkTheme max-w-screen-xl md:mx-auto">
+      <Helmet>
+        <title>
+          {textNotepadList.title}
+        </title>
+      </Helmet>
       <div className="flex flex-col items-center">
         {load && (
           <div className="flex">

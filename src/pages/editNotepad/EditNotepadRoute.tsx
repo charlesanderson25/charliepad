@@ -8,6 +8,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-simple-toasts";
 import { useEffect, useState } from "react";
 import BreadCrumbs from "../../components/BreadCrumbs";
+import { Helmet } from "react-helmet";
 
 interface StyledLabelProps {
   titulo: string;
@@ -27,6 +28,7 @@ const textEditNotepad = {
   title: "Editar Notepad",
   editSuccess: "Edição concluída com sucesso",
   editeFailure: "Ocorreu um erro ",
+  titleEdit: "Editar Notepad",
 };
 
 const initialStageNotepad = {
@@ -69,6 +71,11 @@ const EditNotepadRoute = () => {
 
   return (
     <section className="my-20 relative min-h-screen">
+      <Helmet>
+        <title>
+          {textEditNotepad.titleEdit}
+        </title>
+      </Helmet>
       <div className="form-container absolute inset-x-1/4">
         <form
           className="form bg-darkTheme rounded-2xl py-9 px-16 font-sans"

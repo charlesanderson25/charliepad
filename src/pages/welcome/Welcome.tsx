@@ -1,15 +1,22 @@
 import BackGroundImage from "../../components/BackGroundImage";
+import { Helmet } from "react-helmet";
 
 const textWelcome = {
     h2: "Bem vindo ao",
     span: "CharliePad",
     p: "Faça suas anotações, relate seus pensamentos, tome notas. . .",
+    title: "Home | CharliePad",
 }
 
 const Welcome = () => {
     return (
 
             <div className="p-20">
+                <Helmet>
+                    <title>
+                        {textWelcome.title}
+                    </title>
+                </Helmet>
                 <h2 
                     style={{ fontFamily: "Josefin Sans, sans-serif" }} 
                     className="text-white text-5xl font-extrabold tracking-wide">
