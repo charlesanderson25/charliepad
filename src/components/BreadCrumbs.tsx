@@ -1,10 +1,10 @@
 import { FaLongArrowAltRight as ArrowIcon } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const textBreadCrumbs = {
-  home: "Home",
-  edit: "Edit",
-};
+// const textBreadCrumbs = {
+//   home: "Home",
+//   edit: "Edit",
+// };
 
 interface PropsBreadCrumbs {
   link: {

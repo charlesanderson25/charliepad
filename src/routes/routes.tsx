@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import BackGroundImage from "../components/BackGroundImage";
 import { NotFoundTwo } from "../pages/notFound/NotFoundTwo";
-import HomeRoute from "../pages/NotepadListMain/NotepadListMain";
 import Welcome from "../pages/welcome/Welcome";
 import CreateNotepadRoute from "../pages/createNotepadRoute/CreateNotepadRoute";
 import EditNotepadRoute from "../pages/editNotepad/EditNotepadRoute";
@@ -22,4 +21,3 @@ const RoutesApp = () => {
 };
 
 export default RoutesApp;
-

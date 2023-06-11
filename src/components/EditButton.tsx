@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { string } from "zod";
-import { api } from "../api";
+import { Link } from "react-router-dom";
 import { FaEdit as EditIcon } from "react-icons/fa";
 
 interface PropsEditButton {
@@ -12,7 +10,7 @@ const texts = {
   titleEditNotepad: "Editar Notepad",
 };
 
-const EditButton = ( { id }: PropsEditButton ) => {
+const EditButton = ({ id }: PropsEditButton) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
