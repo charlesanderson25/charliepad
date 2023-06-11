@@ -1,5 +1,9 @@
 import { FaRegCopyright } from 'react-icons/fa';
 
+const textFooter = {
+    h2: "Charles Anderson",
+}
+
 const Footer = () => {
     return (
         <div 
@@ -10,7 +14,7 @@ const Footer = () => {
                 <div className="mr-2">
                     <CopyrightIcon />
                 </div>
-                <h2 className="tracking-wide">Charles Anderson</h2>
+                <h2 className="tracking-wide"> {textFooter.h2} </h2>
             </div>
         </div>
     );
