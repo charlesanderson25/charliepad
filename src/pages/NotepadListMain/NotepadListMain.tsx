@@ -25,7 +25,7 @@ import { Helmet } from "react-helmet";
 
 const textNotepadList = {
   title: "NotepadList",
-}
+};
 
 interface Notepad {
   id: string;
@@ -64,9 +64,7 @@ const NotepadList = () => {
   return (
     <div className="p-5 m-5 text-white bg-darkTheme max-w-screen-xl md:mx-auto">
       <Helmet>
-        <title>
-          {textNotepadList.title}
-        </title>
+        <title>{textNotepadList.title}</title>
       </Helmet>
       <div className="flex flex-col items-center">
         {load && (
@@ -86,7 +84,7 @@ const NotepadList = () => {
                   { href: "/", label: "Home" },
                   {
                     href: `/editar-notepad/${notepad.id}`,
-                    label: `Editar Notepad${notepad.id}`,
+                    label: `Editar Notepad ${notepad.id}`,
                   },
                 ]}
               />
