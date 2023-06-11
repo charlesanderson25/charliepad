@@ -3,6 +3,11 @@ import ButtonCreateNotepad from "./ButtonCreateNotepad";
 import { Link } from "react-router-dom";
 import ListNotepads from "./ListNotepads";
 
+const textsBanner = {
+  h1: "CharliePad",
+  home: "Home",
+}
+
 const Banner = () => {
   return (
     <div
@@ -13,14 +18,14 @@ const Banner = () => {
         <Link to="/" className="flex items-center mr-16">
           <IconLogoNotepad className="bg-defaultRed text-6xl m-1 " />
           <h1 className="font-bold text-2xl text-white hover:text-defaultRed tracking-wide">
-            CharliePad
+            {textsBanner.h1}
           </h1>
         </Link>
         <Link
           className="text-white text-l font-bold hover:text-defaultRed tracking-wide"
           to="/"
         >
-          Home
+          {textsBanner.home}
         </Link>
         <ListNotepads />
       </div>
