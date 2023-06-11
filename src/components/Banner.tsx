@@ -6,7 +6,7 @@ import ListNotepads from "./ListNotepads";
 const textsBanner = {
   h1: "CharliePad",
   home: "Home",
-}
+};
 
 const Banner = () => {
   return (
