@@ -3,7 +3,7 @@ import ButtonSubmitForm from "../../components/ButtonSubmitForm";
 import { ErrorMessage } from "../../components/ErrorMessage";
 import { api } from "../../api";
 import { notepadSchema } from "../../notepadSchema";
-import { Value, useZorm } from "react-zorm";
+import { useZorm } from "react-zorm";
 import { useNavigate } from "react-router-dom";
 import toast from "react-simple-toasts";
 import BreadCrumbs from "../../components/BreadCrumbs";
