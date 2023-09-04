@@ -5,14 +5,14 @@
 //     id: uuid(),
 //     tittle: "Primeiro Notepad",
 //     subtitle: "Primeiro Notepad cadastrado",
-//     created_at: new Date(),
+//     createdAt: new Date(),
 //   },
 
 //   {
 //     id: uuid(),
 //     tittle: "Segundo Notepad",
 //     subtitle: "Segundo Notepad cadastrado",
-//     created_at: new Date(),
+//     createdAt: new Date(),
 //   },
 // ];
 
@@ -26,7 +26,7 @@
 //           <div key={notepad.id} className="border-b p-2">
 //             <h1 className="text-lg font-bold">{notepad.tittle}</h1>
 //             <h4 className="italic">{notepad.subtitle}</h4>
-//             <p>{notepad.created_at.toLocaleDateString()}</p>
+//             <p>{notepad.createdAt.toLocaleDateString()}</p>
 //           </div>
 //         );
 //       })}

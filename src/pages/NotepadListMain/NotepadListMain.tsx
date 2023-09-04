@@ -11,14 +11,14 @@ import { Helmet } from "react-helmet";
 //     id: uuid(),
 //     tittle: "Primeiro Notepad",
 //     subtitle: "Primeiro Notepad cadastrado",
-//     created_at: new Date(),
+//     createdAt: new Date(),
 //   },
 
 //   {
 //     id: uuid(),
 //     tittle: "Segundo Notepad",
 //     subtitle: "Segundo Notepad cadastrado",
-//     created_at: new Date(),
+//     createdAt: new Date(),
 //   },
 // ];
 
@@ -31,7 +31,7 @@ interface Notepad {
   title: string;
   subtitle: string;
   content: string;
-  created_at: Date;
+  createdAt: Date;
 }
 
 const initialNotepads: Notepad[] = [];
@@ -97,7 +97,7 @@ const NotepadList = () => {
             <h1 className="text-2xl font-bold">{notepad.title}</h1>
             <h4 className="text-lg	font-bold">{notepad.subtitle}</h4>
             <p className="italic">{notepad.content}</p>
-            <p>{new Date(notepad.created_at).toLocaleDateString()}</p>
+            <p>{new Date(notepad.createdAt).toLocaleDateString()}</p>
           </div>
         );
       })}
@@ -113,7 +113,7 @@ const NotepadList = () => {
 //         <div key={notepad.id} className="border-b p-2">
 //           <h1 className="text-lg font-bold">{notepad.tittle}</h1>
 //           <h4>{notepad.subtitle}</h4>
-//           <p>{notepad.created_at.toLocaleDateString()}</p>
+//           <p>{notepad.createdAt.toLocaleDateString()}</p>
 //         </div>
 //       );
 //     })}

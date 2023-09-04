@@ -36,7 +36,7 @@ const initialStageNotepad = {
   title: "",
   subtitle: "",
   content: "",
-  created_at: "",
+  createdAt: "",
 };
 
 const EditNotepadRoute = () => {
@@ -72,9 +72,7 @@ const EditNotepadRoute = () => {
   return (
     <section className="my-20 relative min-h-screen">
       <Helmet>
-        <title>
-          {textEditNotepad.titleEdit}
-        </title>
+        <title>{textEditNotepad.titleEdit}</title>
       </Helmet>
       <div className="form-container absolute inset-x-1/4">
         <form
