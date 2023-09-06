@@ -38,7 +38,7 @@ const CreateNotepadRoute = () => {
       const response = await api.post("/notepads", event.data);
       console.log(response.data.sucess);
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         toast("O notepad foi cadastrado com sucesso!");
       } else {
         toast("Ocorreu um erro ao cadastrar o notepad!");
