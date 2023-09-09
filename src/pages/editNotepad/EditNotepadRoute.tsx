@@ -49,9 +49,11 @@ const EditNotepadRoute = () => {
     async onValidSubmit(event) {
       event.preventDefault();
       const response = await api.patch(`/notepads/${params.id}`, event.data);
-      console.log(response.data.success);
+      console.log(response.data);
 
-      if (response.data.success === true) {
+      if (response.status == 200) {
+        console.log(response.data);
+
         toast(textEditNotepad.editSuccess);
         navigate("/listar-notepads/");
       } else {
