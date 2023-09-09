@@ -44,6 +44,8 @@ const NotepadList = () => {
 
   async function getNotepads() {
     const response = await api.get("/notepads");
+    console.log(response);
+
     const showNotepads: Notepad[] = response.data.notepads;
     setNotepads(showNotepads);
   }
