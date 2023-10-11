@@ -36,7 +36,7 @@ const initialStageNotepad = {
   title: "",
   subtitle: "",
   content: "",
-  createdAt: "",
+  created_at: "",
 };
 
 const EditNotepadRoute = () => {
