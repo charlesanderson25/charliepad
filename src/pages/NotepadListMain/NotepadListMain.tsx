@@ -31,7 +31,7 @@ interface Notepad {
   title: string;
   subtitle: string;
   content: string;
-  createdAt: Date;
+  created_at: Date;
 }
 
 const initialNotepads: Notepad[] = [];
@@ -99,7 +99,7 @@ const NotepadList = () => {
             <h1 className="text-2xl font-bold">{notepad.title}</h1>
             <h4 className="text-lg	font-bold">{notepad.subtitle}</h4>
             <p className="italic">{notepad.content}</p>
-            <p>{new Date(notepad.createdAt).toLocaleDateString()}</p>
+            <p>{new Date(notepad.created_at).toLocaleDateString()}</p>
           </div>
         );
       })}
